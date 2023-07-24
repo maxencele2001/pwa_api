@@ -1,0 +1,16 @@
+# framework:
+#     serializer:
+#         enabled: true
+#         default_context:
+#             object_to_populate: App\Entity\Student
+#         mapping:
+#             App:
+#                 is_attribute: true
+#                 groups:
+#                     student: ['school', 'student']
+#                     school: ['school', 'student']
+# framework:
+#     serializer:
+#         default_context:
+#             groups: ['Default']
+#         # ...

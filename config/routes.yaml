@@ -1,3 +1,32 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+app_login:
+    path: /login
+    controller: App\Controller\AuthController::login
+    methods: [POST]
+
+get_roles:
+    path: /getroles
+    controller: App\Controller\AuthController::getRoles
+    methods: [GET]
+
+comment_notes_get_all:
+    path: /comment_notes
+    methods: GET
+    controller: App\Controller\CommentNoteController::getAllCommentNotes
+
+comment_notes_get_by_student:
+    path: /students/{id}/comment_notes
+    methods: GET
+    controller: App\Controller\CommentNoteController::getCommentNotesByStudent
+
+comment_note_delete:
+    path: /comment_notes/{id}
+    methods: DELETE
+    controller: App\Controller\CommentNoteController::deleteCommentNote
+
+comment_note_update:
+    path: /comment_notes/{id}
+    methods: PUT
+    controller: App\Controller\CommentNoteController::updateCommentNote
